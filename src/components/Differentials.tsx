@@ -1,5 +1,5 @@
 import { Heart, Sparkles, Home, Lightbulb, Leaf } from "lucide-react";
-import clinicImage from "@/assets/clinic-2.jpg";
+import interiorImage from "@/assets/interior.jpg";
 
 const differentials = [
   {
@@ -60,9 +60,9 @@ const Differentials = () => {
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-br from-secondary/40 to-transparent rounded-3xl blur-xl" />
             <img
-              src={clinicImage}
-              alt="Espaço Rabello - Ambiente"
-              className="relative w-full h-auto rounded-2xl shadow-lg object-cover aspect-square"
+              src={interiorImage}
+              alt="Interior do Espaço Rabello"
+              className="relative w-full h-auto rounded-2xl shadow-lg object-cover aspect-[3/4]"
               loading="lazy"
             />
           </div>

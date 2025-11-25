@@ -1,4 +1,4 @@
-import clinicImage from "@/assets/clinic-3.jpg";
+import outdoorImage from "@/assets/outdoor.jpg";
 
 const About = () => {
   return (
@@ -8,8 +8,8 @@ const About = () => {
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-tl from-secondary/30 to-transparent rounded-3xl blur-xl" />
             <img
-              src={clinicImage}
-              alt="Atendimento personalizado no Espaço Rabello"
+              src={outdoorImage}
+              alt="Fachada do Espaço Rabello"
               className="relative w-full h-auto rounded-2xl shadow-lg object-cover aspect-[3/4]"
               loading="lazy"
             />
