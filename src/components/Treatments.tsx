@@ -1,45 +1,45 @@
-import { Sparkles, Droplet, Syringe, Star, Target, Flame, Heart, Users } from "lucide-react";
+import { Hand, Droplet, CircleDot, Sparkles, Flame, Heart, Leaf, Smile } from "lucide-react";
 
 const treatments = [
   {
-    icon: Sparkles,
-    title: "Limpeza de pele",
-    description: "Remoção de impurezas e renovação celular para uma pele mais saudável.",
-  },
-  {
-    icon: Star,
-    title: "Clareamento",
-    description: "Tratamento para manchas e uniformização do tom da pele.",
-  },
-  {
-    icon: Syringe,
-    title: "Bioestimuladores",
-    description: "Estímulo natural de colágeno para firmeza e rejuvenescimento.",
+    icon: Hand,
+    title: "Massagem Terapêutica",
+    description: "Alívio de tensões musculares e promoção do bem-estar físico e mental.",
   },
   {
     icon: Droplet,
-    title: "Skinbooster",
-    description: "Hidratação profunda que revitaliza e ilumina a pele.",
-  },
-  {
-    icon: Target,
-    title: "Microagulhamento",
-    description: "Renovação da pele e redução de cicatrizes e linhas finas.",
+    title: "Drenagem Linfática",
+    description: "Redução de inchaços e eliminação de toxinas para um corpo mais leve.",
   },
   {
     icon: Flame,
-    title: "Lipo enzimática",
-    description: "Redução de gordura localizada de forma não invasiva.",
+    title: "Massagem Modeladora",
+    description: "Técnica que auxilia na redução de medidas e melhora do contorno corporal.",
+  },
+  {
+    icon: Sparkles,
+    title: "Tratamentos Faciais",
+    description: "Limpeza de pele, facelifting e cuidados completos para o rosto.",
+  },
+  {
+    icon: CircleDot,
+    title: "Ventosaterapia",
+    description: "Técnica milenar que estimula a circulação e alivia dores musculares.",
+  },
+  {
+    icon: Leaf,
+    title: "SPA & Relaxamento",
+    description: "Momentos de paz e revitalização para corpo e mente.",
   },
   {
     icon: Heart,
-    title: "Protocolos faciais",
-    description: "Tratamentos completos personalizados para o rosto.",
+    title: "Drenagem Pós-Operatório",
+    description: "Recuperação mais rápida e confortável após procedimentos cirúrgicos.",
   },
   {
-    icon: Users,
-    title: "Protocolos corporais",
-    description: "Cuidados específicos para o corpo todo.",
+    icon: Smile,
+    title: "Tratamento de Acne",
+    description: "Cuidados especializados para pele acneica e prevenção de cicatrizes.",
   },
 ];
 
@@ -55,7 +55,7 @@ const Treatments = () => {
             Tratamentos
           </h2>
           <p className="body-text max-w-2xl mx-auto">
-            Conheça nossos tratamentos desenvolvidos para realçar sua beleza natural
+            Conheça nossos tratamentos desenvolvidos para seu bem-estar e cuidado pessoal
           </p>
         </div>
 

@@ -10,56 +10,69 @@ interface Question {
 const questions: Question[] = [
   {
     id: 1,
-    question: "Qual é sua principal preocupação estética?",
+    question: "O que você está buscando?",
     options: [
-      { label: "Manchas e tom irregular da pele", value: "manchas" },
-      { label: "Flacidez e perda de firmeza", value: "flacidez" },
-      { label: "Linhas finas e rugas", value: "rugas" },
-      { label: "Gordura localizada", value: "gordura" },
+      { label: "Relaxamento e alívio do estresse", value: "relaxamento" },
+      { label: "Redução de medidas e modelagem corporal", value: "modelagem" },
+      { label: "Cuidados com a pele do rosto", value: "facial" },
+      { label: "Recuperação pós-cirúrgica", value: "pos-operatorio" },
     ],
   },
   {
     id: 2,
-    question: "Qual região do corpo você gostaria de tratar?",
+    question: "Qual região do corpo você gostaria de focar?",
     options: [
       { label: "Rosto", value: "rosto" },
-      { label: "Corpo (abdômen, braços, pernas)", value: "corpo" },
-      { label: "Ambos", value: "ambos" },
+      { label: "Corpo (costas, pernas, abdômen)", value: "corpo" },
+      { label: "Corpo inteiro", value: "inteiro" },
     ],
   },
   {
     id: 3,
-    question: "Você já realizou algum procedimento estético antes?",
+    question: "Com que frequência você pode fazer tratamentos?",
     options: [
-      { label: "Sim, vários", value: "varios" },
-      { label: "Sim, poucos", value: "poucos" },
-      { label: "Não, será minha primeira vez", value: "primeira" },
+      { label: "Uma vez por semana", value: "semanal" },
+      { label: "Quinzenalmente", value: "quinzenal" },
+      { label: "Uma vez por mês", value: "mensal" },
+      { label: "Apenas ocasionalmente", value: "ocasional" },
     ],
   },
   {
     id: 4,
-    question: "Quanto tempo você pode dedicar aos tratamentos?",
+    question: "Você prefere tratamentos mais...",
     options: [
-      { label: "Procedimentos rápidos (até 1h)", value: "rapido" },
-      { label: "Sessões moderadas (1-2h)", value: "moderado" },
-      { label: "Protocolos completos (mais de 2h)", value: "completo" },
+      { label: "Relaxantes e suaves", value: "relaxante" },
+      { label: "Intensos com resultados visíveis", value: "intenso" },
+      { label: "Equilibrados entre relaxamento e resultado", value: "equilibrado" },
     ],
   },
 ];
 
 const getRecommendation = (answers: Record<number, string>): string => {
-  const concern = answers[1];
+  const objetivo = answers[1];
   const area = answers[2];
+  const preferencia = answers[4];
   
-  if (concern === "manchas") {
-    return "Clareamento e Limpeza de Pele";
-  } else if (concern === "flacidez") {
-    return area === "rosto" ? "Bioestimuladores e Skinbooster" : "Protocolos corporais";
-  } else if (concern === "rugas") {
-    return "Bioestimuladores e Microagulhamento";
-  } else if (concern === "gordura") {
-    return "Lipo enzimática e Protocolos corporais";
+  if (objetivo === "relaxamento") {
+    if (preferencia === "intenso") {
+      return "Massagem Terapêutica com Ventosa";
+    }
+    return "SPA & Momento Relaxante";
+  } else if (objetivo === "modelagem") {
+    if (preferencia === "relaxante") {
+      return "Drenagem Linfática";
+    }
+    return "Massagem Modeladora";
+  } else if (objetivo === "facial") {
+    return "Limpeza de Pele e Tratamentos Faciais";
+  } else if (objetivo === "pos-operatorio") {
+    return "Drenagem Pós-Operatório";
   }
+  
+  if (area === "rosto") {
+    return "Tratamentos Faciais Personalizados";
+  }
+  
   return "Avaliação personalizada";
 };
 
