@@ -23,13 +23,14 @@ const About = () => {
               A Espaço Rabello
             </h2>
             <p className="body-text mb-6">
-              O Espaço Rabello foi criado para oferecer uma experiência estética completa, 
-              combinando ambiente acolhedor, atendimento próximo e técnicas atualizadas.
+              O Espaço Rabello foi criado para ser seu refúgio de bem-estar. Oferecemos 
+              massagens terapêuticas, drenagens linfáticas, tratamentos faciais e experiências 
+              de SPA em um ambiente acolhedor e relaxante.
             </p>
             <p className="body-text">
-              Nosso foco é proporcionar bem-estar e transformar a forma como você se olha 
-              no espelho, de maneira leve e natural. Cada tratamento é pensado especialmente 
-              para realçar sua beleza única.
+              Nosso foco é proporcionar momentos de cuidado e relaxamento que renovam 
+              corpo e mente. Cada sessão é pensada especialmente para suas necessidades, 
+              trazendo equilíbrio e bem-estar.
             </p>
             
             <div className="divider-soft my-8" />

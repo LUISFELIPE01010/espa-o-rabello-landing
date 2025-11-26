@@ -8,12 +8,12 @@ const Hero = () => {
           <div className="order-2 lg:order-1 text-center lg:text-left">
             <h1 className="heading-1 text-foreground mb-6 animate-fade-in">
               Espaço Rabello –{" "}
-              <span className="text-primary">Realce sua beleza</span> com naturalidade
+              <span className="text-primary">Bem-estar e cuidado</span> para você
             </h1>
             <p className="body-text mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              A união entre tecnologia estética e cuidado dedicado, criando resultados que 
-              valorizam a beleza natural e elevam a autoestima. No Espaço Rabello, cada pessoa 
-              recebe atenção personalizada e protocolos desenvolvidos de forma cuidadosa.
+              Um espaço dedicado ao seu relaxamento e cuidado pessoal. Massagens terapêuticas, 
+              drenagens, tratamentos faciais e momentos de SPA para renovar corpo e mente. 
+              Cada atendimento é personalizado para suas necessidades.
             </p>
             <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <a
