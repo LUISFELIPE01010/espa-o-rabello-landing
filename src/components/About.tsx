@@ -11,7 +11,8 @@ const About = () => {
               src={outdoorImage}
               alt="Fachada do Espaço Rabello"
               className="relative w-full h-auto rounded-2xl shadow-lg object-cover aspect-[3/4]"
-              loading="lazy"
+              loading="eager"
+              decoding="async"
             />
           </div>
           

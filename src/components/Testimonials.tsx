@@ -1,10 +1,15 @@
 import { Star } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 const testimonials = [
   {
     name: "Mariana S.",
     text: "Atendimento impecável! Me senti muito acolhida desde a primeira avaliação. Os resultados superaram minhas expectativas.",
-    treatment: "Bioestimuladores",
+    treatment: "Drenagem Linfática",
   },
   {
     name: "Fernanda L.",
@@ -13,10 +18,41 @@ const testimonials = [
   },
   {
     name: "Carolina M.",
-    text: "Encontrei o lugar perfeito para cuidar da minha pele. O tratamento foi personalizado para as minhas necessidades.",
-    treatment: "Skinbooster",
+    text: "Encontrei o lugar perfeito para cuidar de mim. A massagem terapêutica é maravilhosa, saio renovada!",
+    treatment: "Massagem Terapêutica",
   },
 ];
+
+const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] }) => (
+  <div className="card-soft h-full">
+    <div className="flex gap-1 mb-4">
+      {[...Array(5)].map((_, i) => (
+        <Star
+          key={i}
+          className="w-4 h-4 fill-primary text-primary"
+        />
+      ))}
+    </div>
+    <p className="text-foreground/80 mb-6 leading-relaxed">
+      "{testimonial.text}"
+    </p>
+    <div className="flex items-center gap-3">
+      <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
+        <span className="text-sm font-medium text-secondary-foreground">
+          {testimonial.name.charAt(0)}
+        </span>
+      </div>
+      <div>
+        <span className="block font-medium text-foreground text-sm">
+          {testimonial.name}
+        </span>
+        <span className="text-xs text-muted-foreground">
+          {testimonial.treatment}
+        </span>
+      </div>
+    </div>
+  </div>
+);
 
 const Testimonials = () => {
   return (
@@ -27,40 +63,30 @@ const Testimonials = () => {
             Depoimentos
           </span>
           <h2 className="heading-2 text-foreground mt-2 mb-4">
-            O que nossas pacientes dizem
+            O que nossas clientes dizem
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        {/* Mobile Carousel */}
+        <div className="md:hidden">
+          <Carousel opts={{ align: "start", loop: true }} className="w-full">
+            <CarouselContent className="-ml-2">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-2 basis-[90%]">
+                  <TestimonialCard testimonial={testimonial} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+          <p className="text-xs text-muted-foreground text-center mt-4">
+            Deslize para ver mais →
+          </p>
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden md:grid md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="card-soft">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-4 h-4 fill-primary text-primary"
-                  />
-                ))}
-              </div>
-              <p className="text-foreground/80 mb-6 leading-relaxed">
-                "{testimonial.text}"
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
-                  <span className="text-sm font-medium text-secondary-foreground">
-                    {testimonial.name.charAt(0)}
-                  </span>
-                </div>
-                <div>
-                  <span className="block font-medium text-foreground text-sm">
-                    {testimonial.name}
-                  </span>
-                  <span className="text-xs text-muted-foreground">
-                    {testimonial.treatment}
-                  </span>
-                </div>
-              </div>
-            </div>
+            <TestimonialCard key={index} testimonial={testimonial} />
           ))}
         </div>
       </div>
