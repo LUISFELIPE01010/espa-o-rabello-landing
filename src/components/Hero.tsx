@@ -5,9 +5,9 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center pt-20 md:pt-0">
       <div className="container-narrow mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="order-2 lg:order-1 text-center lg:text-left">
+          <div className="order-2 lg:order-1 text-center">
             <h1 className="heading-1 text-foreground mb-6 animate-fade-in">
-              Espaço Rabello –{" "}
+              Espaço Rabello{" "}
               <span className="text-primary">Bem-estar e cuidado</span> para você
             </h1>
             <p className="body-text mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in" style={{ animationDelay: "0.1s" }}>

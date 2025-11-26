@@ -1,4 +1,4 @@
-import clinicImage1 from "@/assets/clinic-1.jpg";
+import resultImage1 from "@/assets/result-1.jpg";
 import clinicImage2 from "@/assets/clinic-2.jpg";
 import clinicImage3 from "@/assets/clinic-3.jpg";
 import {
@@ -8,8 +8,8 @@ import {
 } from "@/components/ui/carousel";
 
 const results = [
-  { id: 1, image: clinicImage1, alt: "Resultado de tratamento facial" },
-  { id: 2, image: clinicImage2, alt: "Resultado de tratamento corporal" },
+  { id: 1, image: resultImage1, alt: "Resultado de tratamento corporal" },
+  { id: 2, image: clinicImage2, alt: "Resultado de tratamento facial" },
   { id: 3, image: clinicImage3, alt: "Procedimento estético" },
 ];
 
