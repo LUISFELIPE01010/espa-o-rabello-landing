@@ -1,4 +1,9 @@
 import { Hand, Droplet, CircleDot, Sparkles, Flame, Heart, Leaf, Smile } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 const treatments = [
   {
@@ -43,6 +48,24 @@ const treatments = [
   },
 ];
 
+const TreatmentCard = ({ treatment }: { treatment: typeof treatments[0] }) => (
+  <div className="card-soft group hover:border-primary/30 text-center h-full">
+    <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+      <treatment.icon className="w-6 h-6 text-primary" />
+    </div>
+    <h3 className="font-medium text-foreground mb-2">{treatment.title}</h3>
+    <p className="text-sm text-muted-foreground mb-4">{treatment.description}</p>
+    <a
+      href="https://wa.me/5513988400050"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+    >
+      Quero saber mais →
+    </a>
+  </div>
+);
+
 const Treatments = () => {
   return (
     <section id="tratamentos" className="section-padding">
@@ -59,26 +82,26 @@ const Treatments = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        {/* Mobile Carousel */}
+        <div className="md:hidden">
+          <Carousel opts={{ align: "start", loop: true }} className="w-full">
+            <CarouselContent className="-ml-2">
+              {treatments.map((treatment, index) => (
+                <CarouselItem key={index} className="pl-2 basis-[85%]">
+                  <TreatmentCard treatment={treatment} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+          <p className="text-xs text-muted-foreground text-center mt-4">
+            Deslize para ver mais →
+          </p>
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden md:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {treatments.map((treatment, index) => (
-            <div
-              key={index}
-              className="card-soft group hover:border-primary/30 text-center"
-            >
-              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-secondary/50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                <treatment.icon className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="font-medium text-foreground mb-2">{treatment.title}</h3>
-              <p className="text-sm text-muted-foreground mb-4">{treatment.description}</p>
-              <a
-                href="https://wa.me/5513988400050"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-              >
-                Quero saber mais →
-              </a>
-            </div>
+            <TreatmentCard key={index} treatment={treatment} />
           ))}
         </div>
       </div>
