@@ -84,7 +84,7 @@ const Treatments = () => {
 
         {/* Mobile Carousel */}
         <div className="md:hidden">
-          <Carousel opts={{ align: "start", loop: true }} className="w-full">
+          <Carousel opts={{ align: "start", loop: true, dragFree: true, duration: 20 }} className="w-full">
             <CarouselContent className="-ml-2">
               {treatments.map((treatment, index) => (
                 <CarouselItem key={index} className="pl-2 basis-[85%]">
