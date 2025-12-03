@@ -2,7 +2,7 @@ import clinicImage from "@/assets/clinic-1.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 md:pt-0">
+    <section className="relative min-h-screen flex items-center pt-28 md:pt-24 lg:pt-0">
       <div className="container-narrow mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="order-2 lg:order-1 text-center">
