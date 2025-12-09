@@ -28,6 +28,36 @@ const results = [
   }
 ];
 
+const ResultCard = ({
+  result,
+  isActive,
+  onClick
+}: {
+  result: typeof results[0];
+  isActive?: boolean;
+  onClick?: () => void;
+}) => (
+  <button
+    onClick={onClick}
+    className={`group relative overflow-hidden rounded-2xl aspect-[3/4] w-full transition-all duration-300 ${
+      isActive !== undefined 
+        ? isActive 
+          ? "ring-2 ring-primary ring-offset-2" 
+          : "opacity-60 hover:opacity-100"
+        : ""
+    }`}
+  >
+    <img 
+      src={result.image} 
+      alt={result.alt} 
+      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+      loading="eager" 
+      decoding="async" 
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+  </button>
+);
+
 const Results = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -70,41 +100,16 @@ const Results = () => {
           </p>
         </div>
 
-        {/* Desktop Click Gallery */}
-        <div className="hidden md:block">
-          {/* Main Image */}
-          <div className="relative overflow-hidden rounded-2xl aspect-[16/9] mb-4">
-            <img 
-              src={results[activeIndex].image} 
-              alt={results[activeIndex].alt} 
-              className="w-full h-full object-cover transition-opacity duration-300" 
-              loading="eager" 
-              decoding="async" 
+        {/* Desktop Grid with Click Navigation */}
+        <div className="hidden md:grid md:grid-cols-4 gap-4">
+          {results.map((result, index) => (
+            <ResultCard 
+              key={result.id} 
+              result={result} 
+              isActive={activeIndex === index}
+              onClick={() => setActiveIndex(index)}
             />
-          </div>
-          
-          {/* Thumbnails */}
-          <div className="grid grid-cols-4 gap-3">
-            {results.map((result, index) => (
-              <button
-                key={result.id}
-                onClick={() => setActiveIndex(index)}
-                className={`relative overflow-hidden rounded-xl aspect-[4/3] transition-all duration-200 ${
-                  activeIndex === index 
-                    ? "ring-2 ring-primary ring-offset-2" 
-                    : "opacity-70 hover:opacity-100"
-                }`}
-              >
-                <img 
-                  src={result.image} 
-                  alt={result.alt} 
-                  className="w-full h-full object-cover" 
-                  loading="eager" 
-                  decoding="async" 
-                />
-              </button>
-            ))}
-          </div>
+          ))}
         </div>
 
         <div className="text-center mt-10">
