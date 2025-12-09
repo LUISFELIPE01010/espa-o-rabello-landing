@@ -1,4 +1,7 @@
 import { useState } from "react";
+import resultImage1 from "@/assets/result-1.jpg";
+import clinicImage2 from "@/assets/clinic-2.jpg";
+import clinicImage3 from "@/assets/clinic-3.jpg";
 import resultMassage1 from "@/assets/result-massage-1.jpg";
 import resultCupping from "@/assets/result-cupping.jpg";
 import resultMassage2 from "@/assets/result-massage-2.jpg";
@@ -8,21 +11,36 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 const results = [
   {
     id: 1,
+    image: resultImage1,
+    alt: "Resultado de tratamento corporal"
+  },
+  {
+    id: 2,
+    image: clinicImage2,
+    alt: "Resultado de tratamento facial"
+  },
+  {
+    id: 3,
+    image: clinicImage3,
+    alt: "Procedimento estético"
+  },
+  {
+    id: 4,
     image: resultMassage1,
     alt: "Massagem modeladora"
   },
   {
-    id: 2,
+    id: 5,
     image: resultCupping,
     alt: "Ventosaterapia"
   },
   {
-    id: 3,
+    id: 6,
     image: resultMassage2,
     alt: "Massagem relaxante"
   },
   {
-    id: 4,
+    id: 7,
     image: resultBody,
     alt: "Tratamento corporal"
   }
