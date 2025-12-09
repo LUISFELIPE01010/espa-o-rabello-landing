@@ -38,7 +38,7 @@ const About = () => {
                 <span className="text-sm text-muted-foreground">Anos de experiência</span>
               </div>
               <div>
-                <span className="block text-2xl md:text-3xl font-semibold text-primary">98%</span>
+                <span className="block text-2xl md:text-3xl font-semibold text-primary">+1000</span>
                 <span className="text-sm text-muted-foreground">Satisfação</span>
               </div>
             </div>
