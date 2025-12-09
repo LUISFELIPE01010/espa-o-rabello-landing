@@ -30,7 +30,7 @@ const Hero = () => {
         }}>
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-secondary/50 to-transparent rounded-3xl blur-2xl" />
-              <img alt="Tratamento estético no Espaço Rabello" className="relative w-full max-h-[60vh] lg:max-h-[55vh] rounded-2xl shadow-xl object-cover aspect-square" loading="eager" src="/lovable-uploads/9c25a4e3-843b-48e0-a824-1cf813e73aed.png" />
+              <img alt="Tratamento estético no Espaço Rabello" className="relative w-full max-h-[60vh] lg:max-h-[55vh] rounded-2xl shadow-xl object-cover aspect-square" loading="eager" src="/lovable-uploads/4a44cf0b-4ea1-4a81-97d5-ef0c7f0a0b19.png" />
             </div>
           </div>
         </div>
