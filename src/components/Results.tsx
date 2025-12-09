@@ -15,13 +15,13 @@ const results = [
   },
   {
     id: 2,
-    image: clinicImage2,
-    alt: "Resultado de tratamento facial"
+    image: resultCupping,
+    alt: "Ventosaterapia"
   },
   {
     id: 3,
-    image: clinicImage3,
-    alt: "Procedimento estético"
+    image: clinicImage2,
+    alt: "Resultado de tratamento facial"
   },
   {
     id: 4,
@@ -30,18 +30,18 @@ const results = [
   },
   {
     id: 5,
-    image: resultCupping,
-    alt: "Ventosaterapia"
+    image: clinicImage3,
+    alt: "Procedimento estético"
   },
   {
     id: 6,
-    image: resultMassage2,
-    alt: "Massagem relaxante"
+    image: resultBody,
+    alt: "Tratamento corporal"
   },
   {
     id: 7,
-    image: resultBody,
-    alt: "Tratamento corporal"
+    image: resultMassage2,
+    alt: "Massagem relaxante"
   }
 ];
 
