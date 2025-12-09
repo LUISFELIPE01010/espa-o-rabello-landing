@@ -1,19 +1,11 @@
 import outdoorImage from "@/assets/outdoor.jpg";
-
 const About = () => {
-  return (
-    <section id="sobre" className="section-padding bg-muted/30">
+  return <section id="sobre" className="section-padding bg-muted/30">
       <div className="container-narrow mx-auto">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-tl from-secondary/30 to-transparent rounded-3xl blur-xl" />
-            <img
-              src={outdoorImage}
-              alt="Fachada do Espaço Rabello"
-              className="relative w-full h-auto rounded-2xl shadow-lg object-cover aspect-[3/4]"
-              loading="eager"
-              decoding="async"
-            />
+            <img src={outdoorImage} alt="Fachada do Espaço Rabello" className="relative w-full h-auto rounded-2xl shadow-lg object-cover aspect-[3/4]" loading="eager" decoding="async" />
           </div>
           
           <div className="text-center lg:text-left">
@@ -42,7 +34,7 @@ const About = () => {
                 <span className="text-sm text-muted-foreground">Clientes atendidas</span>
               </div>
               <div>
-                <span className="block text-2xl md:text-3xl font-semibold text-primary">5</span>
+                <span className="block text-2xl md:text-3xl font-semibold text-primary">​+7</span>
                 <span className="text-sm text-muted-foreground">Anos de experiência</span>
               </div>
               <div>
@@ -53,8 +45,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
