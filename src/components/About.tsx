@@ -30,7 +30,7 @@ const About = () => {
             
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
-                <span className="block text-2xl md:text-3xl font-semibold text-primary">+500</span>
+                <span className="block text-2xl md:text-3xl font-semibold text-primary">+1000</span>
                 <span className="text-sm text-muted-foreground">Clientes atendidas</span>
               </div>
               <div>
